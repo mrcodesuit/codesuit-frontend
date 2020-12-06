@@ -4,6 +4,7 @@
 		CServices
 		CAboutMe
 		.placeholder
+		p Test
 
 </template>
 
