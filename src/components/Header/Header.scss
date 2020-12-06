@@ -1,0 +1,116 @@
+@import '~/scss/variables';
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.6rem;
+	max-width: 120rem;
+	margin: 0 auto;
+	.logo-wrapper {
+		display: flex;
+		img {
+			max-width: 6rem;
+
+			&:first-of-type {
+				margin-right: 1.2rem;
+			}
+			&:last-of-type{
+				max-width: 7rem;
+			}
+		}
+	}
+	.menu-wrapper {
+		display: flex;
+		.menu-list {
+			display: flex;
+			margin-right: 5.6rem;
+			.menu-item {
+				margin-right: 3.2rem;
+				&:last-of-type {
+					margin-right: 0;
+				}
+				.item-link {
+					display: inline-block;
+					position: relative;
+
+					&::before {
+						position: absolute;
+						bottom: -0.2rem;
+						content: '';
+						height: 0.1rem;
+						width: 1rem;
+						background-color: $black;
+						transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+					}
+
+					&:hover {
+						&::before {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+		.menu-toggler {
+			align-items: flex-end;
+			display: flex;
+			flex-direction: column;
+			height: inherit;
+			justify-content: space-evenly;
+			margin-right: 2.4rem;
+			position: relative;
+			cursor: pointer;
+			width: 3.2rem;
+
+			&:hover {
+				svg {
+					circle {
+						stroke-dashoffset: 900;
+					}
+				}
+
+				span {
+					width: 3.2rem;
+					&:last-of-type {
+						width: 2.4rem;
+					}
+				}
+			}
+			span {
+				display: block;
+				position: relative;
+				content: '';
+				background-color: $black;
+				height: 0.2rem;
+				width: 2.6rem;
+				border-radius: 0.8rem;
+				transition: width 0.2s ease-out;
+
+				&:last-of-type {
+					width: 1.2rem;
+				}
+			}
+			svg {
+				position: absolute;
+				width: 6.4rem;
+				height: 6.4rem;
+				transform: translateX(25%);
+
+				circle {
+					fill: transparent;
+					stroke: black;
+					stroke-width: 1;
+					stroke-dasharray: 50;
+					stroke-dashoffset: 1000;
+					transition: all .7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+				}
+			}
+		}
+	}
+}
+
+/* @keyframes rotate {
+	to {
+		stroke-dashoffset: 0;
+	}
+} */
