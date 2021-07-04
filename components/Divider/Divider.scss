@@ -1,0 +1,24 @@
+@import '~assets/scss/variables';
+
+.CDivider {
+	background-color: $offblack;
+	position: relative;
+
+	.logoWrapper {
+		display: flex;
+		justify-content: center;
+
+		.codesuitLogo {
+			width: 50%;
+		}
+
+		.mrLogo {
+			width: 50%;
+			// margin-left: 2rem;
+		}
+	}
+
+	.SlantBottomDivider{
+		margin-bottom: -2px;
+	}
+}

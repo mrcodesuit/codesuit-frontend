@@ -1,0 +1,59 @@
+@import "~assets/scss/variables";
+
+.CHeroMinimal {
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url("~@/assets/img/grapefruit_lime.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 60vh;
+  position: relative;
+  width: 100%;
+
+  .subTitleWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    p {
+      color: #000;
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      span {
+        display: block;
+        font-weight: 900;
+        font-size: 3.6rem;
+        letter-spacing: 3px;
+      }
+    }
+  }
+
+  .infoBox {
+    background-color: $secondary-color;
+    padding: 3.2rem;
+    h1.title {
+      display: block;
+      color: #fff;
+      margin-bottom: 0;
+
+      span {
+        display: block;
+        font-weight: 200;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .triangleDivider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+  }
+}

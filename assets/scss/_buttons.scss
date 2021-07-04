@@ -1,0 +1,89 @@
+@import './variables';
+
+.btnWrapper {
+	display: flex;
+}
+
+.btn {
+	display: flex;
+	position: relative;
+	padding: 19px 22px;
+	max-width: max-content;
+	transition: all 0.2s ease;
+	background-color: transparent;
+	cursor: pointer;
+	text-transform: uppercase;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		background-color: #fff;
+		width: 56px;
+		height: 56px;
+		transition: all 0.3s ease;
+	}
+
+	&-white {
+		&::before {
+			background-color: #FFF;
+		}
+	}
+
+	&-primary {
+		&::before {
+			background-color: $primary-color;
+		}
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	&-secondary {
+		color: $offblack;
+		&::before {
+			background-color: $secondary-color;
+		}
+	}
+
+	&-third {
+		&::before {
+			background-color: $third-color;
+		}
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+		span {
+			&.icon {
+				margin-left: 2rem;
+			}
+		}
+	}
+
+	&:focus {
+		border: none;
+		outline: none;
+	}
+
+	span {
+		position: relative;
+		font-size: 16px;
+		line-height: 18px;
+		letter-spacing: 0.1em;
+		vertical-align: middle;
+
+		&.icon {
+			margin-left: 1rem;
+			font-size: 1.8rem;
+			transition: all 0.3s ease;
+		}
+	}
+}

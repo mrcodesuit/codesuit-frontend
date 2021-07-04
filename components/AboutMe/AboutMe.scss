@@ -1,0 +1,171 @@
+@import '~assets/scss/variables';
+.CAboutMe {
+	position: relative;
+	background-color: #FFF;
+	color: $offblack;
+	.about-me-images {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		min-height: 64rem;
+		.bg-img {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 45%;
+			height: 55%;
+			object-fit: cover;
+			background-color: $primary-color;
+		}
+		.about-me-slider {
+			bottom: 0;
+			height: 80%;
+			position: absolute;
+			z-index: 2;
+			width: 80%;
+
+			.slider-wrapper {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				overflow: hidden;
+
+				img {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			.indicators {
+				background-color: #FFF;
+				bottom: 0;
+				display: flex;
+				padding: 2.4rem;
+				position: absolute;
+				right: 0;
+				width: auto;
+				z-index: 9;
+
+				div[class^='icon-'] {
+					font-size: 2.6rem;
+					transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+					cursor: pointer;
+
+					&::before {
+						position: relative;
+					}
+				}
+
+				.icon-care-left {
+					&:hover {
+						transform: translateX(-0.8rem);
+					}
+				}
+				.icon-care-right {
+					&:hover {
+						transform: translateX(0.8rem);
+					}
+				}
+
+				.counter {
+					margin: 0 2rem;
+					span {
+						font-family: 'Poppins', sans-serif;
+						font-weight: 300;
+						font-size: 1.8rem;
+						margin: 0 0.4rem;
+					}
+				}
+			}
+		}
+	}
+	.about-me-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+
+		.about-me {
+			font-family: 'Oswald', sans-serif;
+			font-weight: 300;
+			text-transform: uppercase;
+			letter-spacing: 8px;
+			font-size: 1.8rem;
+			margin-bottom: 1.6rem;
+		}
+
+		.about-me-heading {
+			font-weight: 600;
+			color: $offblack;
+			margin-bottom: 4rem;
+		}
+
+		.about-me-text {
+			margin-bottom: 4.8rem;
+		}
+	}
+
+	.text-wrapper {
+		padding: 4.8rem 0;
+		padding-right: 2.4rem;
+
+		p {
+			margin-bottom: 4.8rem;
+		}
+	}
+	.skill-content {
+		padding: 4.8rem 0;
+		padding-left: 2.4rem;
+		.skill-wrapper {
+			width: 100%;
+			margin-top: 2.4rem;
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+
+			.skill-top {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				p {
+					display: inline-flex;
+				}
+			}
+			.skill-bottom {
+				display: flex;
+				width: 100%;
+				margin-top: 1.6rem;
+				.skill-bar {
+					position: relative;
+					width: 100%;
+					height: 0.2rem;
+					background-color: lightgray;
+				}
+				.skill-bar-progress {
+					content: '';
+					position: absolute;
+					height: 100%;
+					background-color: $yellow;
+				}
+			}
+		}
+	}
+	.bgPattern {
+		position: absolute;
+		z-index: 1;
+		width: auto;
+		height: 35rem;
+	}
+	.circlePattern {
+		left: -5%;
+		bottom: 0%;
+	}
+
+	.slantBottomDivider {
+		margin-bottom: -2px;
+	}
+}

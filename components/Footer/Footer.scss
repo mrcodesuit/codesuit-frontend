@@ -1,0 +1,78 @@
+@import '~assets/scss/variables';
+.CFooter {
+	background-color: $gray-dark;
+
+	.slantTopDivider{
+		path {
+			fill: $secondary-color !important;
+		}
+	}
+}
+footer {
+	margin: 0 auto;
+	.footerInner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.logo-wrapper {
+		display: flex;
+		img {
+			width: 6rem;
+
+			&:first-of-type {
+				margin-right: 1.2rem;
+			}
+			&:last-of-type {
+				max-width: 7rem;
+			}
+		}
+	}
+	.heart-wrapper {
+		display: flex;
+		align-items: center;
+		p {
+			color: white;
+			span {
+				display: inline-block;
+				font-size: 3.5rem;
+				color: lightcoral;
+				transition: all 0.5s;
+				transform: scale(1);
+				vertical-align: sub;
+				animation: pulse 1.2s infinite;
+			}
+		}
+	}
+	.menu-wrapper {
+		display: flex;
+		.menu-list {
+			display: flex;
+			.menu-item {
+				margin-left: 3.2rem;
+				&:first-of-type {
+					margin-left: 0;
+				}
+				.item-link {
+					display: inline-block;
+					position: relative;
+					color: $gray-light-2;
+				}
+			}
+		}
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+	}
+
+	70% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
+}

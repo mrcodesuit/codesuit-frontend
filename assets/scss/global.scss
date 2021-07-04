@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html,
+body {
+	font-size: 62.5%;
+	margin: 0;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/grid/columns.sass';
+@import 'bulma/sass/grid/tiles.sass';
+@import 'bulma/sass/elements/container.sass';
+@import 'bulma/sass/elements/box.sass';
+$spacing-values: (
+	'0': 0rem,
+	'1': 1rem,
+	'2': 2rem,
+	'3': 3rem,
+	'4': 4rem,
+	'5': 5rem,
+	'6': 6rem,
+	'7': 7rem,
+	'8': 8rem,
+	'9': 9rem,
+);
+@import 'bulma/sass/helpers/spacing.sass';
+@import 'bulma/sass/helpers/flexbox.sass';
+.container {
+	padding: 0 1.6rem;
+}
+
+@import './breakpoints';
+@import './variables';
+@import './typo';
+@import './utils';
+@import './buttons';
