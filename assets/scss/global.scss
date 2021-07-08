@@ -42,9 +42,13 @@ $spacing-values: (
 );
 @import 'bulma/sass/helpers/spacing.sass';
 @import 'bulma/sass/helpers/flexbox.sass';
+@import 'bulma/sass/layout/section.sass';
 .container {
 	padding: 0 1.6rem;
+	width: inherit;
 }
+
+
 
 @import './breakpoints';
 @import './variables';

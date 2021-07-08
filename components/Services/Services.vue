@@ -17,7 +17,7 @@ section#services(:class="$options.name")
 						)
 							DynamicIcon.icon(:icon="service.icon")
 							h4 {{ service.title }}
-		.contentWrapper
+		#servicesContentWrapper.contentWrapper
 			template(v-for="service in services")
 				transition(name="slide-fade")
 					p(v-if="activeService[0].title === service.title") {{ service.content }}
@@ -113,20 +113,39 @@ export default {
 				// 	icon: "pencil-thin",
 				// },
 			],
-			activeService: null,
+			activeService: [
+				{
+					id: 1,
+					title: "Kreatives Webdesign",
+					heading: "Voll responsiv, optimiert für den Wettbewerb",
+					content:
+						"Webdesign befasst sich mit dem, was der Benutzer tatsächlich auf seinem Computerbildschirm oder mobilen Gerät sieht, und weniger mit den Mechanismen unter der Oberfläche, die dafür sorgen, dass das Ganze funktioniert. Durch den Einsatz von Farbe, Bildern, Typografie und Layout wird ein digitales Erlebnis zum Leben erweckt. Ich erstelle aufmerksamkeitsstarke Webseiten, die Besucher ansprechen und zu Kunden akquiriert werden. Zu meinen Kernkompetenzen gehören maßgeschneidertes Webseiten-Designs, mobile Webseiten, Erstellung von Webanwendungen und Webseiten. Ich erstelle Webseiten, die für jeden zugänglich sind, auf jedes Gerät reagieren und sich an Ihre wachsenden und sich entwickelnden Bedürfnisse anpassen können.",
+					icon: "code-thin",
+				},
+			],
 		};
 	},
-	created() {
-		this.activeService = this.services;
-	},
 	mounted() {
+		this.activeService = this.services;
 		AOS.init();
+	},
+	watch: {
+		activeService: function (newVal, oldVal) {},
 	},
 	methods: {
 		selectService: function (title) {
-			return (this.activeService = this.services.filter((service) => {
+			this.activeService = this.services.filter((service) => {
 				return service.title === title;
-			}));
+			});
+			const el = document.getElementById("servicesContentWrapper");
+			const y = el.getBoundingClientRect().top + window.scrollY;
+			console.log(el);
+			setTimeout(() => {
+				return window.scroll({
+					top: y - 200,
+					behavior: "smooth",
+				});
+			}, 250);
 		},
 	},
 };

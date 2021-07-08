@@ -1,7 +1,7 @@
 <template lang="pug">
-  .LDefault
-    Header
-    Nuxt
-    Contact
-    Footer
+.LDefault
+	Header
+	Nuxt
+	Contact
+	Footer
 </template>

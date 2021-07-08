@@ -1,10 +1,7 @@
 <template lang="pug">
 section#process.mt-9.mb-9(:class="$options.name")
 	.container
-		h2.sectionHeading.marker.mb-9(
-			data-aos="fade-left",
-			data-aos-once="false"
-		) Ablauf
+		h2.sectionHeading.marker.mb-9(data-aos="fade-left", data-aos-once="false") Ablauf
 		.columns.mb-9
 			.column
 				h4 Der erste Schritt eines erfolgreichen Projektes ist die Ebene der Kommunikation. Siezen Sie noch oder duzt du schon? - Ab hier wird geduzt!
@@ -26,7 +23,7 @@ section#process.mt-9.mb-9(:class="$options.name")
 					li.process__item
 						span.process__number 4
 						span.process__title Veröffentlichung
-						span.process__subtitle Wenn der Soll-Zustand aus der ersten Phase zu 100% erreicht ist und du zu 100% zufrieden bist, werden wir gemeinsam das Projekt veröffentlichen.
+						span.process__subtitle Wenn der Soll-Zustand aus den ersten beiden Phasen zu 100% erreicht ist und du zu 100% zufrieden bist, werden wir gemeinsam das Projekt veröffentlichen.
 
 		.columns.is-variable.is-8
 			.column
@@ -49,7 +46,7 @@ export default {
 	name: "CProcess",
 	components: {
 		SlantTopDivider,
-		SlantBottomDivider
+		SlantBottomDivider,
 	},
 	data() {
 		return {

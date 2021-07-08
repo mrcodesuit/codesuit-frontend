@@ -1,4 +1,6 @@
 @import '~assets/scss/variables';
+@import '~assets/scss/breakpoints';
+
 .CFooter {
 	background-color: $gray-dark;
 
@@ -20,9 +22,6 @@ footer {
 		img {
 			width: 6rem;
 
-			&:first-of-type {
-				margin-right: 1.2rem;
-			}
 			&:last-of-type {
 				max-width: 7rem;
 			}
@@ -31,16 +30,28 @@ footer {
 	.heart-wrapper {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		p {
 			color: white;
+			margin-bottom: 0;
+			font-size: 1rem;
+
+			@include media('>tablet') {
+				font-size: 1.6rem;
+			}
+
 			span {
 				display: inline-block;
-				font-size: 3.5rem;
 				color: lightcoral;
+				font-size: 2rem;
 				transition: all 0.5s;
 				transform: scale(1);
 				vertical-align: sub;
 				animation: pulse 1.2s infinite;
+				
+				@include media('>tablet') {
+					font-size: 3.5rem;
+				}
 			}
 		}
 	}
@@ -49,7 +60,10 @@ footer {
 		.menu-list {
 			display: flex;
 			.menu-item {
-				margin-left: 3.2rem;
+				margin-left: 1rem;
+				@include media('>tablet') {
+					margin-left: 3.2rem;
+				}
 				&:first-of-type {
 					margin-left: 0;
 				}
@@ -57,6 +71,7 @@ footer {
 					display: inline-block;
 					position: relative;
 					color: $gray-light-2;
+					margin-bottom: 0;
 				}
 			}
 		}

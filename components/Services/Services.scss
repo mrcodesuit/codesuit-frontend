@@ -1,4 +1,5 @@
 @import '~assets/scss/variables';
+@import '~assets/scss/breakpoints';
 
 .CServices {
 	position: relative;
@@ -23,7 +24,6 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			overflow: hidden;
 			cursor: pointer;
 			transition: transform 0.6s ease-in-out;
 
@@ -43,12 +43,10 @@
 
 			&.active {
 				&.top {
-					// transform: translateY(3rem);
 					border-bottom: 2px solid $offblack;
 				}
 
 				&.bottom {
-					// transform: translateY(-3rem);
 					border-top: 2px solid $offblack;
 				}
 				h4 {
@@ -57,16 +55,6 @@
 			}
 
 			&:hover {
-				// background-color: rgba(245, 203, 92, 0.5);
-
-				// &.top {
-				// 	transform: translateY(3rem);
-				// }
-
-				// &.bottom {
-				// 	transform: translateY(-3rem);
-				// }
-
 				.icon {
 					animation-name: shake;
 					animation-duration: 0.6s;
@@ -113,17 +101,29 @@
 		position: relative;
 		flex-direction: column;
 		justify-content: center;
-		padding: 2.4rem;
-		margin: 3.2rem;
-		min-height: 23rem;
+		height: auto;
 		background-color: transparent;
 		color: $offblack;
 		font-weight: 500;
 		line-height: 1.5;
+		margin: 0;
+		margin: 3.2rem 0;
+		flex: 1;
+
+		@include media('>tablet') {
+			min-height: 23rem;
+			margin: 3.2rem;
+			padding: 2.4rem;
+		}
 
 		p {
-			position: absolute;
+			position: relative;
 			text-align: center;
+			margin-bottom: 0;
+			
+			@include media('>tablet') {
+				position: absolute;
+			}
 		}
 	}
 
@@ -133,10 +133,15 @@
 
 	.cactus {
 		position: absolute;
-		bottom: -27rem;
-		left: -3rem;
-		width: 27rem;
 		z-index: 1;
+		width: 15rem;
+		left: -0.8rem;
+		
+		@include media('>tablet') {
+			left: -3rem;
+			width: 27rem;
+			bottom: -27rem;
+		}
 	}
 
 	.bgPattern {

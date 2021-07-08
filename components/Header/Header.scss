@@ -28,6 +28,10 @@ header {
 			span {
 				font-size: 1.4rem;
 				font-weight: 700;
+
+				@include media('<=tablet') {
+					font-size: 1.1rem;
+				}
 			}
 		}
 	}
@@ -42,12 +46,16 @@ header {
 			padding: 4px;
 			margin-bottom: 0;
 
+			@include media('<=tablet') {
+				margin-right: 0.8rem;
+			}
+
 			&:hover {
 				&::before {
 					content: '';
 					position: absolute;
 					display: block;
-					background-color: rgba(255,255,255,0.9);
+					background-color: rgba(255, 255, 255, 0.9);
 					width: 100%;
 					height: 100%;
 					border-radius: 50%;
@@ -85,6 +93,11 @@ header {
 		background-color: #fff;
 		padding: 1.6rem;
 
+		@include media('<=tablet') {
+			background-color: transparent;
+			position: fixed;
+		}
+
 		.menu-toggler {
 			position: fixed;
 			display: flex;
@@ -96,6 +109,11 @@ header {
 			cursor: pointer;
 			transition: all 0.4s;
 
+			@include media('<=tablet') {
+				height: 6rem;
+				width: 10rem;
+			}
+
 			&.isActive {
 				right: 0;
 			}
@@ -103,8 +121,12 @@ header {
 			.icon-codesuit {
 				width: 4.8rem;
 				margin: 0 1.2rem;
+
+				@include media('<=tablet') {
+					width: 4rem;
+				}
 			}
-			
+
 			.icon {
 				fill: #fff;
 			}
@@ -115,6 +137,10 @@ header {
 		display: flex;
 		margin: 0;
 		align-items: center;
+
+		@include media('<=tablet') {
+			visibility: hidden;
+		}
 
 		.codesuit-logo,
 		.mr-sign {
@@ -131,6 +157,11 @@ header {
 	.menu-wrapper {
 		position: relative;
 		display: flex;
+
+		@include media('<=tablet') {
+			visibility: hidden;
+		}
+
 		.menu-list {
 			display: flex;
 			align-items: center;
@@ -175,10 +206,21 @@ header {
 		padding: 8rem;
 		z-index: 1000;
 		background-color: $offblack;
-		transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+		-webkit-backface-visibility: hidden;
+		transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-		&.isOpen{
+		@include media('<=tablet') {
+			padding: 3.2rem;
+		}
+
+		&.isOpen {
 			right: 0;
+
+			.menu-wrapper {
+				@include media('<=tablet') {
+					visibility: unset;
+				}
+			}
 		}
 
 		.innerWrapper {
@@ -189,19 +231,33 @@ header {
 			width: 100%;
 			padding: 8rem;
 
+			@include media('<=tablet') {
+				padding: 3.2rem;
+				height: 100%;
+			}
+
 			.icon-x-mark {
 				position: absolute;
 				top: 0;
 				right: 0;
 				fill: #fff;
 				cursor: pointer;
+
+				@include media('<=tablet') {
+					transform: scale(0.8);
+				}
 			}
 
 			.icon-codesuit {
 				width: 12rem;
 				margin: 0 1.2rem;
-				margin-bottom: 8rem !important;
+				margin-bottom: 8rem;
 				height: unset;
+
+				@include media('<=tablet') {
+					width: 10rem;
+					margin-bottom: 4rem;
+				}
 			}
 
 			.menu-wrapper {
@@ -216,6 +272,10 @@ header {
 					.menu-item {
 						margin-bottom: 4rem;
 						margin-right: 0;
+
+						@include media('<=tablet') {
+							margin-bottom: 2.4rem;
+						}
 
 						&:last-of-type {
 							margin-bottom: 0;
@@ -236,6 +296,11 @@ header {
 							color: #fff;
 							margin-bottom: 0;
 							text-transform: uppercase;
+
+							@include media('<=tablet') {
+								font-size: 2rem;
+							}
+	
 						}
 					}
 				}

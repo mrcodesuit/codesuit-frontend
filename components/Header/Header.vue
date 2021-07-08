@@ -41,7 +41,7 @@ header(:class="$options.name")
 							nuxt-link.item-link(to="/#contact") Kontakt
 				.menu-toggler-easy
 					Menu.icon(@click="toggleSidebarMenu")
-			.menu-toggler(ref="menuToggler")
+			.menu-toggler.isActive(ref="menuToggler")
 				CodesuitLogoWhite.icon-codesuit
 				Menu.icon(@click="toggleSidebarMenu")
 		.sidebarMenuWrapper(:class="{ isOpen: showSidebar }")
@@ -122,7 +122,6 @@ export default {
 		};
 	},
 	beforeMount() {
-		console.log(this.$route);
 		if (this.$route.path === "/") this.isIndexPage = true;
 		else this.isIndexPage = false;
 	},
