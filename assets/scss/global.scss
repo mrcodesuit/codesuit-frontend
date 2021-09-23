@@ -28,17 +28,20 @@ ul {
 @import 'bulma/sass/grid/tiles.sass';
 @import 'bulma/sass/elements/container.sass';
 @import 'bulma/sass/elements/box.sass';
+
+$spacing-multiply: 1.2;
+
 $spacing-values: (
-	'0': 0rem,
-	'1': 1rem,
-	'2': 2rem,
-	'3': 3rem,
-	'4': 4rem,
-	'5': 5rem,
-	'6': 6rem,
-	'7': 7rem,
-	'8': 8rem,
-	'9': 9rem,
+	'0': 0rem * $spacing-multiply,
+	'1': 1rem * $spacing-multiply,
+	'2': 2rem * $spacing-multiply,
+	'3': 3rem * $spacing-multiply,
+	'4': 4rem * $spacing-multiply,
+	'5': 5rem * $spacing-multiply,
+	'6': 6rem * $spacing-multiply,
+	'7': 7rem * $spacing-multiply,
+	'8': 8rem * $spacing-multiply,
+	'9': 9rem * $spacing-multiply
 );
 @import 'bulma/sass/helpers/spacing.sass';
 @import 'bulma/sass/helpers/flexbox.sass';
@@ -48,6 +51,10 @@ $spacing-values: (
 	width: inherit;
 }
 
+
+.row-reverse {
+	flex-direction: row-reverse
+}
 
 
 @import './breakpoints';

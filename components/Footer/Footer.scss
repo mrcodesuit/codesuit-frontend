@@ -22,6 +22,10 @@ footer {
 		img {
 			width: 6rem;
 
+			@include media('<=tablet') {
+				width: 4.5rem;
+			}
+
 			&:last-of-type {
 				max-width: 7rem;
 			}
@@ -72,6 +76,10 @@ footer {
 					position: relative;
 					color: $gray-light-2;
 					margin-bottom: 0;
+
+					@include media('<=tablet') {
+						font-size: 1rem;
+					}
 				}
 			}
 		}

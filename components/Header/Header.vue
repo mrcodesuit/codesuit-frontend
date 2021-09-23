@@ -6,14 +6,17 @@ header(:class="$options.name")
 				WhatsApp.icon
 				span +49 176 345 066 97
 			.socialWrapper
-				a(href="#")
-					Facebook.icon.icon-facebook
-				a(href="#")
-					LinkedIn.icon.icon-linkedin
-				a(href="#")
-					Youtube.icon.icon-youtube
-				a(href="#")
-					Instagram.icon.icon-instagram
+				.iconWrapper
+					MailIcon.icon
+					span kontakt@codesuit.de
+			//- 	a(href="#")
+			//- 		Facebook.icon.icon-facebook
+			//- 	a(href="#")
+			//- 		LinkedIn.icon.icon-linkedin
+			//- 	a(href="#")
+			//- 		Youtube.icon.icon-youtube
+			//- 	a(href="#")
+			//- 		Instagram.icon.icon-instagram
 		#headerInner.headerInner
 			nuxt-link.logo-wrapper(to="/#hero")
 				CodesuitLogo.codesuit-logo
@@ -41,9 +44,9 @@ header(:class="$options.name")
 							nuxt-link.item-link(to="/#contact") Kontakt
 				.menu-toggler-easy
 					Menu.icon(@click="toggleSidebarMenu")
-			.menu-toggler.isActive(ref="menuToggler")
+			.menu-toggler.isActive(ref="menuToggler" @click="toggleSidebarMenu")
 				CodesuitLogoWhite.icon-codesuit
-				Menu.icon(@click="toggleSidebarMenu")
+				Menu.icon
 		.sidebarMenuWrapper(:class="{ isOpen: showSidebar }")
 			.innerWrapper
 				XMark.icon-x-mark(@click="toggleSidebarMenu")
@@ -74,6 +77,7 @@ header(:class="$options.name")
 
 <script>
 import WhatsApp from "~/assets/img/whatsapp.svg?inline";
+import MailIcon from "~/assets/img/mail-thin.svg?inline";
 import Facebook from "~/assets/img/facebook.svg?inline";
 import Youtube from "~/assets/img/youtube.svg?inline";
 import LinkedIn from "~/assets/img/linkedin.svg?inline";
@@ -104,6 +108,7 @@ export default {
 	name: "CHeader",
 	components: {
 		WhatsApp,
+		MailIcon,
 		Facebook,
 		Youtube,
 		LinkedIn,

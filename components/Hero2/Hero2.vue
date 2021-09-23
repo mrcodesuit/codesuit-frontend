@@ -9,7 +9,7 @@
 						| und Modern
 			.column.is-6
 				.infoBox
-					h1.title Webdesign
+					h1.title Webentwicklung
 						span aus Köln
 	img.triangleDivider(src="~/assets/img/slant-bottom.svg")
 </template>

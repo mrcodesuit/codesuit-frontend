@@ -16,10 +16,10 @@
 
 		.service-card {
 			position: relative;
-			min-height: 15rem;
+			min-height: 12rem;
 			max-width: 70%;
 			margin: 0 auto;
-			padding: 2.4rem;
+			padding: 0 2.4rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -111,7 +111,7 @@
 		flex: 1;
 
 		@include media('>tablet') {
-			min-height: 23rem;
+			min-height: 28rem;
 			margin: 3.2rem;
 			padding: 2.4rem;
 		}

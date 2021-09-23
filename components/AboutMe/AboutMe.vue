@@ -1,10 +1,7 @@
 <template lang="pug">
 section#me.pb-6(:class="$options.name")
 	.container
-		h2.sectionHeading.marker.mb-9.mt-6(
-			data-aos="fade-left",
-			data-aos-once="false"
-		) Über mich
+		h2.sectionHeading.underline.underline-primary.mt-6 Über mich
 		.columns.mb-6.is-8.is-variable
 			.column
 				.about-me-images
@@ -27,52 +24,83 @@ section#me.pb-6(:class="$options.name")
 							#next.icon-care-right(@click="go(1)")
 
 			.column
-				.about-me-content(
-					data-aos="fade-left",
-					data-aos-once="false",
-					data-aos-duration="2500"
-				)
+				.about-me-content
 					p.about-me Über mich
 					h3.about-me-heading Zusammen kreieren wir etwas bleibendes
 					p.about-me-text Hallo, ich bin Mirko - ein leidenschaftlicher Entwickler mit einer großen Affinität für digitale Medien. Mein Ziel ist es minimalistische Designs / Websites zu kreiren, die für jeden Menschen zugänglich sind, ohne die aktuellen Design- und Webdesign-Trends zu vernachlässigen. Ich bin offen für jegliche Projektanfragen.
-					button.btn.btn-primary(href="#contact")
-						span Jetzt kontaktieren
-						span.icon.icon-arrow-right
+					a(
+						href="#contact"
+					)
+						button.btn.btn-primary
+							span Jetzt kontaktieren
+							span.icon.icon-arrow-right
 		//- .columns.is-variable.is-8
 		//- 	.column
-		//- 		.text-wrapper
-		//- 			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint totam blanditiis necessitatibus, inventore alias labore molestiae, maxime sequi ut placeat velit quo possimus! Labore aliquam aperiam deserunt consequatur deleniti!  necessitatibus, inventore alias labore molestiae, maxime sequi ut placeat velit quo possimus! Labore aliquam aperiam deserunt consequatur deleniti!
 		//- 			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint totam blanditiis necessitatibus, inventore alias labore molestiae, maxime sequi ut placeat velit quo possimus! Labore aliquam aperiam deserunt consequatur deleniti!  necessitatibus, inventore alias labore molestiae, maxime sequi ut placeat velit quo possimus! Labore aliquam aperiam deserunt consequatur deleniti!
 		//- 	.column
-		//- 		.skill-content
-		//- 			.skill-wrapper
-		//- 				.skill-top
-		//- 					p Modernes Webdesign
-		//- 					p 95%
-		//- 				.skill-bottom
-		//- 					.skill-bar
-		//- 						.skill-bar-progress(style="width: 95%")
-		//- 			.skill-wrapper
-		//- 				.skill-top
-		//- 					p Klassisches (Print-)Design
-		//- 					p 90%
-		//- 				.skill-bottom
-		//- 					.skill-bar
-		//- 						.skill-bar-progress(style="width: 90%")
-		//- 			.skill-wrapper
-		//- 				.skill-top
-		//- 					p SEO
-		//- 					p 85%
-		//- 				.skill-bottom
-		//- 					.skill-bar
-		//- 						.skill-bar-progress(style="width: 85%")
-		//- 			.skill-wrapper
-		//- 				.skill-top
-		//- 					p Marketing
-		//- 					p 85%
-		//- 				.skill-bottom
-		//- 					.skill-bar
-		//- 						.skill-bar-progress(style="width: 85%")
+		//- 			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint totam blanditiis necessitatibus, inventore alias labore molestiae, maxime sequi ut placeat velit quo possimus! Labore aliquam aperiam deserunt consequatur deleniti!  necessitatibus, inventore alias labore molestiae, maxime sequi ut placeat velit quo possimus! Labore aliquam aperiam deserunt consequatur deleniti!
+		.columns
+			.column
+				.skill-content
+					.skill-topic-wrapper
+						h3.skill-topic.underline.underline-primary Frontend:
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/vue-codesuit.svg")
+						p.skill-title Vue.js
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/react-codesuit.svg")
+						p.skill-title React.js
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/pug-codesuit.svg")
+						p.skill-title Pug
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/sass-codesuit.svg")
+						p.skill-title Sass
+					.skill-wrapper.d-none
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/nuxt-codesuit.svg")
+						p.skill-title Nuxt.js
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/jest-codesuit.svg")
+						p.skill-title Jest
+					.skill-wrapper
+						p.cy-logo cy
+						p.skill-title cypress
+
+		.columns
+			.column
+				.skill-content
+					.skill-topic-wrapper
+						h3.skill-topic.underline.underline-primary Backend:
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/nodejs-codesuit.svg")
+						p.skill-title Node.js
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/mongodb-codesuit.svg")
+						p.skill-title MongoDB
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/postgresql-codesuit.svg")
+						p.skill-title PostgresSQL
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/graphql-codesuit.svg")
+						p.skill-title GraphQL
+					.skill-wrapper.d-none
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/rest-codesuit.svg")
+						p.skill-title REST-API
+
+		.columns
+			.column
+				.skill-content
+					.skill-topic-wrapper
+						h3.skill-topic.underline.underline-primary Learning...
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/strapi-codesuit.svg")
+						p.skill-title Strapi
+					.skill-wrapper
+						img.skill-img(src="~/assets/img/nextjs-codesuit.svg")
+						p.skill-title Next.js
+
 		//- img.bgPattern.circlePattern(
 		//- 	src="~/assets/img/circle-pattern.svg",
 		//- 	v-rellax="rellax"

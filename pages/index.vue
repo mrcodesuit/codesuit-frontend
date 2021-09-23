@@ -1,10 +1,11 @@
 <template lang="pug">
 .PIndex
-  Hero2
-  Services
-  AboutMe
-  Divider
-  Process
+	Hero2
+	Services
+	AboutMe
+	Divider
+	Process
+	Portfolio
 </template>
 
 <script>

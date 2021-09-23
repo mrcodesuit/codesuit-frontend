@@ -1,4 +1,5 @@
 @import '~assets/scss/variables';
+@import '~assets/scss/breakpoints';
 
 .CProcess {
 	position: relative;
@@ -44,21 +45,27 @@
 			-webkit-text-stroke: 1px $primary-color;
 			display: block;
 			color: transparent;
-			// font-family: 'Roboto Condensed';
 			font-weight: 700;
 			transition: 0.4s ease-in-out;
-			// color: red;
 		}
 
 		&__title {
 			display: block;
-			// font-family: 'Roboto Condensed';
 			font-weight: 700;
 			letter-spacing: 1.5px;
 			font-size: 24px;
 			color: $primary-color;
 			text-transform: uppercase;
 			margin-top: 30px;
+
+			@include media('<=tablet') {
+				font-size: 1.8rem;
+			}
+
+			@include media('<=phone') {
+				margin-top: 0;
+			}
+
 		}
 
 		&__subtitle {
@@ -67,6 +74,10 @@
 			color: $primary-color;
 			margin-top: 30px;
 			line-height: 1.5;
+
+			@include media('<=phone') {
+				margin-top: 0.8rem;
+			}
 		}
 	}
 

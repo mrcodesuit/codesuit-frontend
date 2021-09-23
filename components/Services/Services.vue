@@ -2,10 +2,7 @@
 section#services(:class="$options.name")
 	SlantTopDivider.triangleTopDivider.mb-6
 	.container
-		h2.sectionHeading.white.marker.mb-6(
-			data-aos="fade-left",
-			data-aos-once="false"
-		) Leistungen
+		h2.sectionHeading.white.underline.underline-black Leistungen
 		.services
 			.columns
 				template(v-for="service in services.slice(0, 2)")
@@ -32,11 +29,6 @@ section#services(:class="$options.name")
 						)
 							DynamicIcon.icon(:icon="service.icon")
 							h4 {{ service.title }}
-		img.cactus(
-			src="~/assets/img/cactus.png",
-			data-aos="fade-right",
-			data-aos-once="false"
-		)
 	SlantBottomDivider.mt-7.slantBottomDivider
 </template>
 
@@ -60,43 +52,43 @@ export default {
 			services: [
 				{
 					id: 1,
-					title: "Kreatives Webdesign",
-					heading: "Voll responsiv, optimiert für den Wettbewerb",
-					content:
-						"Webdesign befasst sich mit dem, was der Benutzer tatsächlich auf seinem Computerbildschirm oder mobilen Gerät sieht, und weniger mit den Mechanismen unter der Oberfläche, die dafür sorgen, dass das Ganze funktioniert. Durch den Einsatz von Farbe, Bildern, Typografie und Layout wird ein digitales Erlebnis zum Leben erweckt. Ich erstelle aufmerksamkeitsstarke Webseiten, die Besucher ansprechen und zu Kunden akquiriert werden. Zu meinen Kernkompetenzen gehören maßgeschneidertes Webseiten-Designs, mobile Webseiten, Erstellung von Webanwendungen und Webseiten. Ich erstelle Webseiten, die für jeden zugänglich sind, auf jedes Gerät reagieren und sich an Ihre wachsenden und sich entwickelnden Bedürfnisse anpassen können.",
-					icon: "code-thin",
-				},
-				{
-					id: 2,
 					title: "Moderne Webseiten",
 					heading:
 						"Wir entwickeln Websites auf höchstem Niveau - für jeden Bedarf.",
 					content:
-						"Ihre Webseite muss Eindruck machen; sie ist die erste Erfahrung, die Ihre Kunden mit Ihrem Unternehmen machen. Ihre Webseite repräsentiert Ihre Marke. Und eine Webseite, die langsam, unzuverlässig oder schwer zu bedienen ist, ist eine Webseite, die Kunden und Interessenten meiden werden. Meine Webseiten werden mit dem Fokus auf Benutzerfreundlickeit, XXX und XXX erstellt. Moderne Webseiten sind der Schlüssel zu Ihrem Wachstum, Ihrer Leistung und Ihrem Einfluss im digitalen Zeitalter. Sie bieten Ihren Kunden die Informationen, die sie benötigen, und etablieren gleichzeitig Ihre Marke. Denn sobald ihre Webseite funktional und designtechnisch ansprechend ist, werden immer mehr Kunden ihre Webseite besuchen.",
+						"Ihre Webseite muss Eindruck machen; es ist der erste Berührungspunkt, die Ihre Kunden mit Ihrem Unternehmen machen. Ihre Webseite repräsentiert Ihre Marke. Und eine Webseite, die langsam, unzuverlässig oder schwer zu bedienen ist, ist eine Webseite, die Kunden und Interessenten meiden werden. Denn egal ob man eine einfache Unternehmens-Website oder einen Onlineshop betreibt: Die Konkurrenz ist im Onlinebusiness nur einen Klick entfernt. Meine Webseiten werden mit dem Fokus auf Benutzerfreundlickeit, Verständlichkeit und Responsivität erstellt. Moderne Webseiten sind der Schlüssel zu Ihrem Wachstum, Ihrer Leistung und Ihrem Einfluss im digitalen Zeitalter. Sie bieten Ihren Kunden die Informationen, die sie benötigen, und etablieren gleichzeitig Ihre Marke. Denn sobald ihre Webseite funktional und designtechnisch ansprechend ist, werden immer mehr Kunden ihre Webseite besuchen.",
 					icon: "globe-thin",
 				},
 				{
+					id: 2,
+					title: "Kreatives Webdesign",
+					heading: "Voll responsiv, optimiert für den Wettbewerb",
+					content:
+						"Webdesign befasst sich mit dem, was der Benutzer tatsächlich auf seinem Computerbildschirm oder mobilen Gerät sieht, und weniger mit den Mechanismen unter der Oberfläche, die dafür sorgen, dass das Ganze funktioniert. Durch den Einsatz von Farbe, Bildern, Typografie und Layout wird ein digitales Erlebnis zum Leben erweckt. Ich erstelle aufmerksamkeitsstarke Webseiten, die Besucher ansprechen und zu Kunden akquiriert werden. Zu meinen Kernkompetenzen gehören maßgeschneiderte Webseiten-Designs, mobile Webseiten, Erstellung von Webanwendungen und Webseiten. Ich erstelle Webseiten, die für jeden zugänglich sind, auf jedes Gerät reagieren und sich an Ihre wachsenden und sich entwickelnden Bedürfnisse anpassen können.",
+					icon: "code-thin",
+				},
+				{
 					id: 3,
+					title: "Webanwendungen & Widgets",
+					content:
+						"Möchten Sie ihre bestehende Internetpräsenz optimieren? Benötigen Sie eine Erweiterung (Widget) für ihre Webseite? Um welche neue Funktionalitäten muss ihre Webseite erweitert werden? Auf Basis ihrer Anforderungen können wir zusammen ihre Webseite erweitern. Beispiele für solch eine Erweiterung ist ein Online-Terminvereinbarungssystem oder eine Onlineshopfunktionalität. Mit Hilfe solcher Erweiterungen kann Ihre Webseite neue Funktionen erlangen, ihre unternehmerischen Tätigkeiten digitalisiert und letztendlich modernisiert werden.",
+					icon: "windows-thin",
+				},
+				{
+					id: 4,
+					title: "SEO & Tracking",
+					content:
+						"SEO steht für Search Engine Optimization (zu dt. Suchmaschinenoptimierung). Es ist eine Reihe von Regeln für die Optimierung Ihrer Website, so dass sie höhere Platzierungen in den organischen Ergebnissen der Suchmaschinen erreichen kann. Es ist der Prozess, den Sie befolgen müssen, um die Sichtbarkeit Ihrer Website in Suchmaschinen zu erhöhen und mehr Traffic zu erhalten. SEO hat zwei Hauptziele. Das erste ist, Ihnen dabei zu helfen, zu verstehen, wonach Benutzer online suchen, damit Sie qualitativ hochwertige Inhalte erstellen können. Das zweite ist, Ihnen dabei zu helfen, eine Website zu erstellen, die von Suchmaschinen gefunden, indiziert und deren Inhalt verstanden werden kann. Darüber hinaus ist das Befolgen guter SEO-Praktiken eine großartige Möglichkeit, die Qualität ihrer Website zu erhöhen, indem sie benutzerfreundlich, schneller und einfacher zu navigieren ist.",
+					icon: "gear-thin",
+				},
+				{
+					id: 5,
 					title: "Blog / Wordpress",
 					heading:
 						"Wir entwickeln Websites auf höchstem Niveau - für jeden Bedarf.",
 					content:
-						"Neben den individuellen Webdesigns / Webseiten biete ich auch Webseiten an, die auf Basis von Wordpress veröffentlicht werden. Ich verwende WordPress als mein Framework der Wahl wegen seiner Anpassbarkeit und der einfachen, ausgefeilten Verwaltungsoberfläche für eine wirklich benutzerfreundliche Erfahrung. Alle meine WordPress-Websites werden speziell für jedes Projekt erstellt. Als erfahrener Frontend-Entwickler geben ich Ihnen nicht nur die Werkzeuge an die Hand, um Inhalte für Ihre neue Website zu erstellen, sondern ich helfe Ihnen auch bei der Zusammenstellung dieser Inhalte vor der endgültigen Erstellung/Publikation. Ich verwende kollaborative Tools zum Sammeln von Inhalten, die es Ihnen ermöglichen, die Inhalte in Bezug auf die Architektur der Website zu visualisieren und alle Änderungen innerhalb Ihres Teams vorzunehmen, bevor Sie live gehen. Zusätzlich haben Sie Zugang zu einer gesicherten Testumgebung Ihrer Website, die auf meinem Server gehostet wird, während die Website erstellt wird.",
+						"Neben den individuellen Webdesigns / Webseiten biete ich auch Webseiten an, die auf Basis von Wordpress veröffentlicht werden. Ich verwende WordPress als mein Framework der Wahl wegen seiner Anpassbarkeit und der einfachen, ausgefeilten Verwaltungsoberfläche für eine wirklich benutzerfreundliche Erfahrung. Alle meine WordPress-Websites werden speziell für jedes Projekt erstellt. Als erfahrener Frontend-Entwickler geben ich Ihnen nicht nur die Werkzeuge an die Hand, um Inhalte für Ihre neue Website zu erstellen, sondern ich helfe Ihnen auch bei der Zusammenstellung dieser Inhalte vor der endgültigen Erstellung/Publikation.",
 					icon: "globe-thin",
-				},
-				{
-					id: 4,
-					title: "Webanwendungen & Widgets",
-					content:
-						"Möchten Sie ihre bestehende Internetpräsenz optimieren? Benötigen Sie eine Erweiterung (Widget) für ihre Webseite? Welche neue Funktionalitäten muss ihre Webseite mitbringen? Auf Basis ihrer Anforderungen kann ihre Webseite erweitert werden. Ein Beispiel für solch ein Widget ist ein Online-Terminvereinbarungssystem. Mit Hilfe solcher Erweiterungen kann Ihre Webseite neue Funktionen erlangen, ihre unternehmerischen Tätigkeiten digitalisiert und letztendlich modernisiert werden.",
-					icon: "windows-thin",
-				},
-				{
-					id: 5,
-					title: "SEO & Marketing",
-					content:
-						"SEO steht für Search Engine Optimization (zu dt. Suchmaschinenoptimierung). Es ist eine Reihe von Regeln für die Optimierung Ihrer Website, so dass sie höhere Platzierungen in den organischen Ergebnissen der Suchmaschinen erreichen kann. Es ist der Prozess, den Sie befolgen müssen, um die Sichtbarkeit Ihrer Website in Suchmaschinen zu erhöhen und mehr Traffic zu erhalten. SEO hat zwei Hauptziele. Das erste ist, Ihnen dabei zu helfen, zu verstehen, wonach Benutzer online suchen, damit Sie qualitativ hochwertige Inhalte erstellen können, um deren Absicht zu erfüllen. Das zweite ist, Ihnen dabei zu helfen, eine Website zu erstellen, die von Suchmaschinen gefunden, indiziert und deren Inhalt verstanden werden kann. Darüber hinaus ist das Befolgen guter SEO-Praktiken eine großartige Möglichkeit, die Qualität ihrer Website zu erhöhen, indem sie benutzerfreundlich, schneller und einfacher zu navigieren ist.",
-					icon: "gear-thin",
 				},
 				// {
 				// 	id: 2,
@@ -116,18 +108,21 @@ export default {
 			activeService: [
 				{
 					id: 1,
-					title: "Kreatives Webdesign",
-					heading: "Voll responsiv, optimiert für den Wettbewerb",
+					title: "Moderne Webseiten",
+					heading:
+						"Wir entwickeln Websites auf höchstem Niveau - für jeden Bedarf.",
 					content:
-						"Webdesign befasst sich mit dem, was der Benutzer tatsächlich auf seinem Computerbildschirm oder mobilen Gerät sieht, und weniger mit den Mechanismen unter der Oberfläche, die dafür sorgen, dass das Ganze funktioniert. Durch den Einsatz von Farbe, Bildern, Typografie und Layout wird ein digitales Erlebnis zum Leben erweckt. Ich erstelle aufmerksamkeitsstarke Webseiten, die Besucher ansprechen und zu Kunden akquiriert werden. Zu meinen Kernkompetenzen gehören maßgeschneidertes Webseiten-Designs, mobile Webseiten, Erstellung von Webanwendungen und Webseiten. Ich erstelle Webseiten, die für jeden zugänglich sind, auf jedes Gerät reagieren und sich an Ihre wachsenden und sich entwickelnden Bedürfnisse anpassen können.",
-					icon: "code-thin",
+						"Ihre Webseite muss Eindruck machen; es ist der erste Berührungspunkt, die Ihre Kunden mit Ihrem Unternehmen machen. Ihre Webseite repräsentiert Ihre Marke. Und eine Webseite, die langsam, unzuverlässig oder schwer zu bedienen ist, ist eine Webseite, die Kunden und Interessenten meiden werden. Denn egal ob man eine einfache Unternehmens-Website oder einen Onlineshop betreibt: Die Konkurrenz ist im Onlinebusiness nur einen Klick entfernt. Meine Webseiten werden mit dem Fokus auf Benutzerfreundlickeit, Verständlichkeit und Responsivität erstellt. Moderne Webseiten sind der Schlüssel zu Ihrem Wachstum, Ihrer Leistung und Ihrem Einfluss im digitalen Zeitalter. Sie bieten Ihren Kunden die Informationen, die sie benötigen, und etablieren gleichzeitig Ihre Marke. Denn sobald ihre Webseite funktional und designtechnisch ansprechend ist, werden immer mehr Kunden ihre Webseite besuchen.",
+					icon: "globe-thin",
 				},
 			],
 		};
 	},
 	mounted() {
 		this.activeService = this.services;
-		AOS.init();
+		AOS.init({
+			once: true,
+		});
 	},
 	watch: {
 		activeService: function (newVal, oldVal) {},
@@ -139,7 +134,6 @@ export default {
 			});
 			const el = document.getElementById("servicesContentWrapper");
 			const y = el.getBoundingClientRect().top + window.scrollY;
-			console.log(el);
 			setTimeout(() => {
 				return window.scroll({
 					top: y - 200,
