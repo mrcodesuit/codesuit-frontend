@@ -5,7 +5,7 @@ section#services(:class="$options.name")
 		h2.sectionHeading.white.underline.underline-black Leistungen
 		.services
 			.columns
-				template(v-for="service in services.slice(0, 2)")
+				template(v-for="service in services.slice(0, 3)")
 					.column
 						.service-card.top(
 							:class="{ active: activeService[0].title === service.title }",
@@ -20,7 +20,7 @@ section#services(:class="$options.name")
 					p(v-if="activeService[0].title === service.title") {{ service.content }}
 		.services
 			.columns
-				template(v-for="service in services.slice(2, 5)")
+				template(v-for="service in services.slice(3, 6)")
 					.column
 						.service-card.bottom(
 							:class="{ active: activeService[0].title === service.title }",
@@ -56,7 +56,7 @@ export default {
 					heading:
 						"Wir entwickeln Websites auf höchstem Niveau - für jeden Bedarf.",
 					content:
-						"Ihre Webseite muss Eindruck machen; es ist der erste Berührungspunkt, die Ihre Kunden mit Ihrem Unternehmen machen. Ihre Webseite repräsentiert Ihre Marke. Und eine Webseite, die langsam, unzuverlässig oder schwer zu bedienen ist, ist eine Webseite, die Kunden und Interessenten meiden werden. Denn egal ob man eine einfache Unternehmens-Website oder einen Onlineshop betreibt: Die Konkurrenz ist im Onlinebusiness nur einen Klick entfernt. Meine Webseiten werden mit dem Fokus auf Benutzerfreundlickeit, Verständlichkeit und Responsivität erstellt. Moderne Webseiten sind der Schlüssel zu Ihrem Wachstum, Ihrer Leistung und Ihrem Einfluss im digitalen Zeitalter. Sie bieten Ihren Kunden die Informationen, die sie benötigen, und etablieren gleichzeitig Ihre Marke. Denn sobald ihre Webseite funktional und designtechnisch ansprechend ist, werden immer mehr Kunden ihre Webseite besuchen.",
+						"Ihre Webseite muss Eindruck machen; es ist der erste Berührungspunkt, die Ihre Kunden mit Ihrem Unternehmen machen. Ihre Webseite repräsentiert Ihre Marke. Und eine Webseite, die langsam, unzuverlässig oder schwer zu bedienen ist, ist eine Webseite, die Kunden und Interessenten meiden werden. Denn egal ob Sie eine einfache Unternehmens-Website oder einen Onlineshop betreibt: Die Konkurrenz ist im Onlinebusiness nur einen Klick entfernt. Meine Webseiten werden mit dem Fokus auf Benutzerfreundlickeit, Verständlichkeit und Responsivität erstellt. Moderne Webseiten sind der Schlüssel zu Ihrem Wachstum, Ihrer Leistung und Ihrem Einfluss im digitalen Zeitalter. Sie bieten Ihren Kunden die Informationen, die sie benötigen, und etablieren gleichzeitig Ihre Marke. Denn sobald ihre Webseite funktional und designtechnisch ansprechend ist, werden immer mehr Kunden ihre Webseite besuchen.",
 					icon: "globe-thin",
 				},
 				{
@@ -76,13 +76,20 @@ export default {
 				},
 				{
 					id: 4,
+					title: "Website Relaunch",
+					content:
+						"Brauchen Sie einen Neuanfang für Ihre bestehende Webseite? Wurde Ihre Webseite vor den 2000ern erstellt? Wenn ja, dann benötigen Sie umgehend jemanden an der Seite, der mit Ihnen zusammen dieses Defizit behebt. Wir schauen uns zusammen den Ist-Zustand an und formulieren nach Ihren Wünschen ein Soll-Szenario, damit Sie für die nächsten Jahren eine moderne und zeitgemäße Webseite besitzen.",
+					icon: "globe-thin",
+				}, 
+				{
+					id: 5,
 					title: "SEO & Tracking",
 					content:
-						"SEO steht für Search Engine Optimization (zu dt. Suchmaschinenoptimierung). Es ist eine Reihe von Regeln für die Optimierung Ihrer Website, so dass sie höhere Platzierungen in den organischen Ergebnissen der Suchmaschinen erreichen kann. Es ist der Prozess, den Sie befolgen müssen, um die Sichtbarkeit Ihrer Website in Suchmaschinen zu erhöhen und mehr Traffic zu erhalten. SEO hat zwei Hauptziele. Das erste ist, Ihnen dabei zu helfen, zu verstehen, wonach Benutzer online suchen, damit Sie qualitativ hochwertige Inhalte erstellen können. Das zweite ist, Ihnen dabei zu helfen, eine Website zu erstellen, die von Suchmaschinen gefunden, indiziert und deren Inhalt verstanden werden kann. Darüber hinaus ist das Befolgen guter SEO-Praktiken eine großartige Möglichkeit, die Qualität ihrer Website zu erhöhen, indem sie benutzerfreundlich, schneller und einfacher zu navigieren ist.",
+						"SEO bestaht aus einer Reihe von Regeln für die Optimierung Ihrer Website, so dass sie höhere Platzierungen in den organischen Ergebnissen der Suchmaschinen erreichen kann. Es ist der Prozess, den Sie befolgen müssen, um die Sichtbarkeit Ihrer Website in Suchmaschinen zu erhöhen und mehr Traffic zu erhalten. SEO hat zwei Hauptziele. Das erste ist, Ihnen dabei zu helfen, zu verstehen, wonach Benutzer online suchen, damit Sie qualitativ hochwertige Inhalte erstellen können. Das zweite ist, Ihnen dabei zu helfen, eine Website zu erstellen, die von Suchmaschinen gefunden, indiziert und deren Inhalt verstanden werden kann. Darüber hinaus ist das Befolgen guter SEO-Praktiken eine großartige Möglichkeit, die Qualität ihrer Website zu erhöhen, indem sie benutzerfreundlich, schneller und einfacher zu navigieren ist.",
 					icon: "gear-thin",
 				},
 				{
-					id: 5,
+					id: 6,
 					title: "Blog / Wordpress",
 					heading:
 						"Wir entwickeln Websites auf höchstem Niveau - für jeden Bedarf.",

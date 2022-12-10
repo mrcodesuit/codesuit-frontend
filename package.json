@@ -2,6 +2,7 @@
   "name": "codesuit-frontend-nuxt",
   "version": "1.0.0",
   "private": true,
+  "description": "use node 15 for yarn run dev",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

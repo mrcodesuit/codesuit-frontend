@@ -2,8 +2,8 @@
 #hero(:class="$options.name")
 	.container
 		.columns
-			.column.is-3.is-offset-3
-			.column.is-6
+			.column
+			.column(:class="getBoxWidth")
 				.infoBox
 					h1.title {{ title }}
 	SlantBottomDivider.triangleDivider
@@ -20,7 +20,16 @@ export default {
 			type: String,
 			required: true,
 		},
+		boxWidth: {
+			type: Number,
+			default: 6
+		},
 	},
+	computed: {
+      getBoxWidth(){
+        return 'is-' + this.$props.boxWidth;
+      }
+    },
 };
 </script>
 

@@ -33,7 +33,7 @@ section#process.mt-9.mb-9(:class="$options.name")
 					)
 						span.process__number 3
 						span.process__title Realisierung
-						span.process__subtitle Während der Realisierungs-Phase bekommst du Zwischenstände zugeschickt, um sofortige Wünsche deinerseits kundtun zu können.
+						span.process__subtitle Während der Realisierung bekommst du Zwischenstände zugeschickt, um sofortige Wünsche deinerseits kundtun zu können.
 					li.process__item(
 						data-aos="fade-up"
 						data-aos-anchor-placement="bottom-bottom"
@@ -46,7 +46,7 @@ section#process.mt-9.mb-9(:class="$options.name")
 
 		.columns.is-variable.is-8.mb-4
 			.column
-				p Jedes Projekt meinerseits durchläuft die eben aufgelisteten Phasen. Wir bleiben während des Projekts kontinuierlich in Kontakt - Transparenz und Zufriedenheit stehen bei mir an erster Stelle. Wenn gewünscht kann ich Dir in jedem Zeitpunkt des Projekts den aktuellen Stand zuschicken. Dadurch lassen sich frühzeitig ungewünschte Umsetzungen lokalisieren und ändern, damit wir im letzten Schritt eine 100%-tige Zufriedenheit erreichen. Alle Projekte, die ich während meiner Zeit als Webdesigner umgesetzt habe, würde ich gleichermaßen in persönlichen Projekten verwenden.
+				p Jedes Projekt meinerseits durchläuft die eben aufgelisteten Phasen. Wir bleiben während des Projekts kontinuierlich in Kontakt - Transparenz und Zufriedenheit stehen bei mir an erster Stelle. Wenn gewünscht kann ich Dir in jedem Zeitpunkt des Projekts den aktuellen Stand zuschicken. Dadurch lassen sich frühzeitig ungewünschte Umsetzungen lokalisieren und ändern, damit wir im letzten Schritt eine 100%-tige Zufriedenheit erreichen.
 			.column
 				p Ich stehe Dir während des kompletten Projektes zur Verfügung, bei Fragen oder Unklarheiten kannst du mich sehr gerne kontaktieren. Nun, da du Dir diesen Block schon sorgfältig durchgelesen hast und ich dich hoffentlich Überzeugen konnte, dass ich der Richtige bin, um dein nächstes Projekt erfolgreich abzuschließen, würde ich mich über eine Nachricht deinerseits freuen, damit wir endlich gemeinsam deine Ziele realisieren können.
 		.columns

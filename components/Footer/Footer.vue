@@ -16,7 +16,7 @@ div(:class="$options.name")
 						li.menu-item
 							nuxt-link.item-link(to="/impressum", exact) Impressum
 						li.menu-item
-							nuxt-link.item-link(to="/datenschutz", exact) Datenschutz
+							nuxt-link.item-link(to="/datenschutz", exact) Datenschutzerklärung
 </template>
 
 <script>

@@ -5,29 +5,26 @@ section#me.pb-6(:class="$options.name")
 		.columns.mb-6.is-8.is-variable
 			.column
 				.about-me-images
-					.bg-img(
-						data-aos="fade-right",
-						data-aos-once="false",
-						data-aos-duration="3000"
-					)
-					.about-me-slider(data-aos="fade-down", data-aos-once="false")
+					.bg-img
+					.about-me-slider
 						.slider-wrapper
-							img.about-me-img(src="~/assets/img/codesuit-mirko-rossbach.jpg")
-							img.about-me-img(src="~/assets/img/codesuit-seo.jpg")
+							//- img.about-me-img(src="~/assets/img/codesuit-mirko-rossbach.jpg")
+							//- img.about-me-img(src="~/assets/img/codesuit-seo.jpg")
 							img.about-me-img(src="~/assets/img/codesuit-mirko.jpg")
-						.indicators
-							#prev.icon-care-left(@click="go(-1)")
-							.counter
-								span {{ currentSlide + 1 }}
-								span /
-								span 3
-							#next.icon-care-right(@click="go(1)")
+						//- .indicators
+						//- 	#prev.icon-care-left(@click="go(-1)")
+						//- 	.counter
+						//- 		span {{ currentSlide + 1 }}
+						//- 		span /
+						//- 		span 3
+						//- 	#next.icon-care-right(@click="go(1)")
 
 			.column
 				.about-me-content
 					p.about-me Über mich
 					h3.about-me-heading Zusammen kreieren wir etwas bleibendes
-					p.about-me-text Hallo, ich bin Mirko - ein leidenschaftlicher Entwickler mit einer großen Affinität für digitale Medien. Mein Ziel ist es minimalistische Designs / Websites zu kreiren, die für jeden Menschen zugänglich sind, ohne die aktuellen Design- und Webdesign-Trends zu vernachlässigen. Ich bin offen für jegliche Projektanfragen.
+					p.about-me-text Hallo, ich bin Mirko - ein leidenschaftlicher Entwickler mit einer großen Affinität für digitale Medien. Mein Ziel ist es minimalistische Designs / Websites zu kreiren, die für jeden Menschen zugänglich sind, ohne die aktuellen Design- und Webdesign-Trends zu vernachlässigen. 
+						span Ich bin offen für jegliche Projektanfragen.
 					a(
 						href="#contact"
 					)
@@ -80,7 +77,7 @@ section#me.pb-6(:class="$options.name")
 						p.skill-title MongoDB
 					.skill-wrapper
 						img.skill-img(src="~/assets/img/postgresql-codesuit.svg")
-						p.skill-title PostgresSQL
+						p.skill-title PostgreSQL
 					.skill-wrapper
 						img.skill-img(src="~/assets/img/graphql-codesuit.svg")
 						p.skill-title GraphQL
@@ -101,10 +98,6 @@ section#me.pb-6(:class="$options.name")
 						img.skill-img(src="~/assets/img/nextjs-codesuit.svg")
 						p.skill-title Next.js
 
-		//- img.bgPattern.circlePattern(
-		//- 	src="~/assets/img/circle-pattern.svg",
-		//- 	v-rellax="rellax"
-		//- )
 </template>
 
 <script>
@@ -122,9 +115,6 @@ export default {
 			currentSlide: 0,
 			nextSlide: 0,
 			animation: false,
-			rellax: {
-				speed: -1.5,
-			},
 		};
 	},
 	mounted() {

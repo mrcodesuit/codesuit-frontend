@@ -17,6 +17,8 @@ header(:class="$options.name")
 			//- 		Youtube.icon.icon-youtube
 			//- 	a(href="#")
 			//- 		Instagram.icon.icon-instagram
+			//- svg
+				circle(r="50" fill="white" cx="50" cy="50")
 		#headerInner.headerInner
 			nuxt-link.logo-wrapper(to="/#hero")
 				CodesuitLogo.codesuit-logo

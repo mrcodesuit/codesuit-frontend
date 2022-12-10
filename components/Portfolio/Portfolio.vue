@@ -6,7 +6,7 @@ section#portfolio.mt-9.mb-9(:class="$options.name")
 		.columns
 			.column.is-7(
 				data-aos="zoom-in-down"
-				data-aos-delay="500"
+				data-aos-delay="100"
 				data-aos-anchor-placement="bottom-bottom"
 			)
 				.img-wrapper
@@ -28,10 +28,10 @@ section#portfolio.mt-9.mb-9(:class="$options.name")
 							href="https://dribbble.com/shots/3968422-Skillshare-Test"
 							target="_blank"
 						) Design / Idee >
-		.columns.mt-9.row-reverse
+		.columns.mt-7.row-reverse
 			.column.is-7(
 				data-aos="zoom-in-down"
-				data-aos-delay="500"
+				data-aos-delay="100"
 				data-aos-anchor-placement="bottom-bottom"
 			)
 				.img-wrapper
@@ -40,7 +40,7 @@ section#portfolio.mt-9.mb-9(:class="$options.name")
 				.case-content
 					h3.case-title # The mist
 					p.h4.topic Filmvorschau
-					p Wie auch im vorherigen Projekt, habe ich ein "Hero"-Bereich für den gleichnamigen Film "The mist" umgesetzt. Dieser soll den Hauptdarsteller in Szene setzen.
+					p Wie auch im vorherigen Projekt, habe ich ein "Hero"-Bereich für den gleichnamigen Film "The mist" umgesetzt. Dieser soll den Hauptdarsteller in Szene setzen und dem Besucher dazu einladen den Trailer des Films anzuschauen, dafür wurde zentriert auf der rechten Seite ein Link platziert.
 					.actions
 						a(
 							href="https://agitated-meitner-1a7dad.netlify.app/"
@@ -53,10 +53,10 @@ section#portfolio.mt-9.mb-9(:class="$options.name")
 						//- 	href="#"
 						//- ) Design / Idee >
 
-		.columns.mt-9
+		.columns.mt-7
 			.column.is-7(
 				data-aos="zoom-in-down"
-				data-aos-delay="500"
+				data-aos-delay="100"
 				data-aos-anchor-placement="bottom-bottom"
 			)
 				.img-wrapper
@@ -65,7 +65,7 @@ section#portfolio.mt-9.mb-9(:class="$options.name")
 				.case-content
 					h3.case-title # Fima - fashion house
 					p.h4.topic Klamottenmarkt
-					p Auf Basis eines Website Templates 
+					p Auf Basis eines Webdesigns wurde eine Startseite für einen Klamottenmarkt umgesetzt. Die einzelnen Produkte / Bereiche der Seite werden per Animation dem Besucher der Seite präsentiert, um so die volle Aufmerksamkeit auf das Produkt zu lenken.
 					.actions
 						a(
 							href="https://quirky-fermat-8b8af1.netlify.app/"
@@ -76,11 +76,12 @@ section#portfolio.mt-9.mb-9(:class="$options.name")
 								span.icon.icon-arrow-right
 						a.design-link(
 							href="https://www.behance.net/gallery/69821161/Fima-Free-Website-Template"
+							target="_blank"
 						) Design / Idee >
 
-		.portfolio-end-text.mt-9
+		.portfolio-end-text.mt-7
 			h3 Hat dir mein Portfolio gefallen ?
-			h4 Dann schreib mir gerne eine Nachricht, damit wir endlich zusammen deine Wünsche realisieren können.
+			h4 Dann schreib mir gerne eine Nachricht, damit wir endlich zusammen deine Ziele realisieren können.
 			a(
 				href="#contact"
 			)
